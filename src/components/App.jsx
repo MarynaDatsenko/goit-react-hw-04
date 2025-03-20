@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import fetchImages from "./services/api";
 import SearchBar from "./SearchBar/SearchBar";
@@ -74,6 +75,7 @@ function App() {
         modalData={modalData}
         onClose={closeModal}
       />
+      <Toaster />
     </>
   );
 }
