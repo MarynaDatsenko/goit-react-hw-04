@@ -2,13 +2,13 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import css from "./SearchBar.module.css";
 
-function SearchBar({ onSearchChange, onSearchClick }) {
+function SearchBar({ onSearchChanged, onSearchClick }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     const value = event.target.value.trim();
     setInputValue(value);
-    onSearchChange(value);
+    onSearchChanged(value);
   };
 
   const handleSubmit = (e) => {
